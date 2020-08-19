@@ -15,7 +15,7 @@ class ChatController extends Controller
      */
     public function index()
     {
-        return Chat::latest()->get();
+        return Chat::orderBy('created_at', 'asc')->get();
     }
 
     /**
@@ -30,7 +30,7 @@ class ChatController extends Controller
             'message' => $request->message
         ]);
 
-        event(new SendMessage($request->message));
+        event(new SendMessage($newMessage));
 
         return $newMessage;
     }

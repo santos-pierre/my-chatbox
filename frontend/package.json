@@ -1,19 +1,41 @@
 {
-  "name": "frontend",
-  "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build"
-  },
+  "name": "frontend2",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "@pika/react": "^16.13.1",
-    "@pika/react-dom": "^16.13.1",
     "@tailwindcss/typography": "^0.2.0",
     "@tailwindcss/ui": "^0.5.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
+    "pusher": "^3.0.1",
+    "pusher-js": "^7.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-hook-form": "^6.4.1",
+    "react-scripts": "3.4.3",
     "tailwindcss": "^1.6.2"
   },
-  "devDependencies": {
-    "vite": "^1.0.0-rc.1",
-    "vite-plugin-react": "^3.0.0"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
