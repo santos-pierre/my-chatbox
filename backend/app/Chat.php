@@ -6,5 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Chat extends Model
 {
-    protected $fillable = ['message'];
+    protected $fillable = ['message', 'name'];
+
+    protected $casts = [
+        'created_at' => 'timestamp'
+    ];
+
 }

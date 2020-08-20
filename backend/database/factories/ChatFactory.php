@@ -8,5 +8,6 @@ use Faker\Generator as Faker;
 $factory->define(Chat::class, function (Faker $faker) {
     return [
         'message' => $faker->text(50),
+        'name' => $faker->name
     ];
 });

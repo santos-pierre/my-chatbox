@@ -27,7 +27,8 @@ class ChatController extends Controller
     public function store(Request $request)
     {
         $newMessage = Chat::create([
-            'message' => $request->message
+            'message' => $request->message,
+            'name' => $request->name
         ]);
 
         event(new SendMessage($newMessage));
