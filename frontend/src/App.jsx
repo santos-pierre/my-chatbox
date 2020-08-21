@@ -11,7 +11,9 @@ import ErrorAlert from './components/partials/ErrorAlert';
 
 export default () => {
 
-  Pusher.logToConsole = true;
+  if (process.env.NODE_ENV === 'development') {
+    Pusher.logToConsole = true;
+  }
   
   const [messages, setMessages] = useState([]);
   const [name, setName] = useState('');
@@ -24,9 +26,11 @@ export default () => {
         .then(response => {
           setMessages(response.data);
           setIsLoading(false);
+          if (hasError) {
+            setHasError(false);
+          }
         })
         .catch(error => {
-          console.log(error);
           setHasError(true);
         })
       let pusher = new Pusher(process.env.REACT_APP_PUSHER_APP_KEY, {
@@ -41,7 +45,7 @@ export default () => {
         pusher.unbind('send-message').unsubscribe('chatbox');
       }
     }
-  },[name]);
+  },[name,hasError])
 
   const onSubmitMessage = (payload, e) => {
     payload = {...payload, name};
@@ -56,7 +60,7 @@ export default () => {
 
   return (
     <div className="flex h-screen justify-center items-center flex-col space-y-3 bg-gray-100">
-      <ErrorAlert message='Sorry, something went wrong with the server! Please again try Later!' hasError={hasError}/>
+      <ErrorAlert message='Sorry, something went wrong with the server! Please try again Later!' hasError={hasError}/>
       {
         !name &&
         <React.Fragment>

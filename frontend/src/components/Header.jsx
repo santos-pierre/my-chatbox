@@ -2,7 +2,7 @@ import React from "react";
 
 export default () => {
     return (
-        <div className="flex items-center space-x-5">
+        <div className="flex items-center space-x-5 mb-2">
             <svg width="94" height="73" viewBox="0 0 94 73" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <mask id="path-1-inside-1" fill="white">
                 <path fillRule="evenodd" clipRule="evenodd" d="M47 71C72.9574 71 94 55.1061 94 35.5C94 15.8939 72.9574 0 47 0C21.0426 0 0 15.8939 0 35.5C0 42.6987 2.83679 49.397 7.71207 54.9918L0.370965 72.7482L30.5253 68.7579C35.652 70.2074 41.2035 71 47 71Z"/>
@@ -13,7 +13,7 @@ export default () => {
                 <circle cx="32" cy="36" r="5" fill="#E6FFFA"/>
                 <circle cx="62" cy="36" r="5" fill="#E6FFFA"/>
             </svg>
-            <h1 className="bg-clip-text text-transparent text-5xl font-bold bg-gradient-to-r from-teal-800 to-teal-400 cursor-pointer">My ChatBox</h1>
+            <h1 className="bg-clip-text text-transparent text-5xl font-bold bg-gradient-to-r from-teal-800 to-teal-400 cursor-pointer md:block hidden">My ChatBox</h1>
         </div>
     )
 }

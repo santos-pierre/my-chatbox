@@ -14,7 +14,7 @@ export default ({hasError , message}) => {
         <React.Fragment>
             {
                 isVisible && 
-                (<div className="bg-red-50 border-l-4 border-red-400 p-4 fixed bottom-5 left-5 transition-opacity ease-in duration-500">
+                (<div className="bg-red-50 border-l-4 border-red-400 p-4 fixed bottom-5 lg:left-5 left-0 transition-opacity ease-in duration-500">
                     <div className="flex">
                         <div className="flex-shrink-0">
                             <svg className="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
