@@ -24,7 +24,6 @@ export default ({messages, currentName}) => {
         <div id='chatlist' className="w-full h-full px-4 flex flex-col space-y-5 mb-2 mt-4 overflow-scroll overflow-x-hidden overflow-y-scroll" 
             style={
                 {
-                    justifyContent: 'safe flex-end', 
                     scrollbarWidth: 'none',
                     msOverflowStyle: 'none',
                 }
